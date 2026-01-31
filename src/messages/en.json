@@ -1,0 +1,111 @@
+{
+  "HomePage": {
+    "title": "Uganda Coffee Shop",
+    "hero_title": "Ugandan Heritage, Japanese Precision",
+    "hero_subtitle": "Experience the Art of Terimba Quality",
+    "explore": "Explore Collection"
+  },
+  "HeritageSection": {
+    "label": "The Art of Coffee",
+    "title": "Perfected in Japan. Born in Uganda.",
+    "description": "We bring the finest beans from the pearl of Africa to the artisans of Japan. Every bean is roasted with the precision and dedication that defines true craftsmanship.",
+    "cta": "Read Our Story"
+  },
+  "Team": {
+    "label": "Our Team",
+    "title": "The People Behind Your Coffee",
+    "description": "Meet the passionate individuals who make Uganda Coffee Shop exceptional. From our farmers in Uganda to our baristas, each person brings dedication and expertise to every cup.",
+    "join_text": "Want to join our growing family?",
+    "join_cta": "View Careers"
+  },
+  "Locations": {
+    "title": "Our Locations",
+    "subtitle": "Find a sanctuary of coffee near you.",
+    "view_details": "View Details",
+    "get_directions": "Get Directions",
+    "hours": "Hours",
+    "address": "Address"
+  },
+  "About": {
+    "title": "The Mwanyi Terimba Story",
+    "heritage_title": "A Legacy of Prosperity",
+    "heritage_text": "Inspired by the Kabaka of Buganda's mission for prosperity, we strive to bring the finest Ugandan coffee to the world.",
+    "team_title": "Our People",
+    "team_text": "Supporting 500+ workers across Uganda and Japan, fostering a community of dedication and excellence."
+  },
+  "Shop": {
+    "title": "Shop Collection",
+    "subscribe_toggle": "Subscribe & Save 10%",
+    "categories": {
+      "liquid": "Liquid Coffee",
+      "beans": "Single Origin Beans",
+      "drip": "Drip Bags",
+      "gifts": "Gift Sets"
+    },
+    "add_to_cart": "Add to Cart"
+  },
+  "Checkout": {
+    "cart_title": "Your Cart",
+    "empty_cart": "Your cart is empty",
+    "continue_shopping": "Continue Shopping",
+    "subtotal": "Subtotal",
+    "delivery_title": "Delivery Information",
+    "full_name": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "address": "Street Address",
+    "city": "City",
+    "region": "Region/District",
+    "country": "Country",
+    "delivery_instructions": "Delivery Instructions",
+    "review_title": "Review Your Order",
+    "order_summary": "Order Summary",
+    "total": "Total",
+    "delivery_details": "Delivery Details",
+    "payment_section": "Payment Method",
+    "payment_coming_soon": "Payment will be processed in the next step.",
+    "payment_methods_hint": "Click 'Proceed to Pay' to complete your order.",
+    "back": "Back",
+    "continue": "Continue",
+    "place_order": "Proceed to Pay",
+    "order_placed": "Order Placed Successfully!",
+    "order_confirmation": "Thank you for your order.",
+    "order_number": "Order Number",
+    "email_confirmation": "A confirmation email will be sent to you shortly."
+  },
+  "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "shop": "Shop",
+    "locations": "Locations",
+    "contact": "Contact"
+  },
+  "Footer": {
+    "shop": "Shop",
+    "about": "About",
+    "support": "Support",
+    "newsletter": "Stay Connected",
+    "newsletter_desc": "Join our community for exclusive updates.",
+    "email_placeholder": "Your email address",
+    "subscribe": "Subscribe",
+    "copyright": "© 2026 Uganda Coffee Shop. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "Contact": {
+    "title": "Contact Us",
+    "subtitle": "We are here to help.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send Message",
+      "types": {
+        "general": "General Inquiry",
+        "wholesale": "Wholesale Inquiry",
+        "press": "Press/Media"
+      }
+    }
+  }
+}

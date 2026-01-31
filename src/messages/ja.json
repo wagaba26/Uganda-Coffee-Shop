@@ -1,0 +1,111 @@
+{
+  "HomePage": {
+    "title": "ウガンダコーヒーショップ",
+    "hero_title": "ウガンダの遺産、日本の職人技",
+    "hero_subtitle": "Terimbaが贈る、最高の品質",
+    "explore": "コレクションを見る"
+  },
+  "HeritageSection": {
+    "label": "コーヒーの芸術",
+    "title": "日本で完成され、ウガンダで生まれた。",
+    "description": "アフリカの真珠から日本の職人へ、最高級の豆をお届けします。すべての豆は、真の職人技を定義する正確さと献身をもって焙煎されています。",
+    "cta": "物語を読む"
+  },
+  "Team": {
+    "label": "私たちのチーム",
+    "title": "コーヒーの背後にいる人々",
+    "description": "ウガンダコーヒーショップを特別なものにしている情熱的な人々をご紹介します。ウガンダの農家からバリスタまで、一人ひとりが一杯に献身と専門知識を注いでいます。",
+    "join_text": "私たちの成長する家族の一員になりませんか？",
+    "join_cta": "採用情報を見る"
+  },
+  "Locations": {
+    "title": "店舗一覧",
+    "subtitle": "お近くのコーヒーの聖地を探す。",
+    "view_details": "詳細を見る",
+    "get_directions": "道順を表示",
+    "hours": "営業時間",
+    "address": "住所"
+  },
+  "About": {
+    "title": "Mwanyi Terimbaの物語",
+    "heritage_title": "繁栄の遺産",
+    "heritage_text": "ブガンダのカバカ（王）の繁栄への使命に触発され、私たちは最高級のウガンダコーヒーを世界に届けるよう努めています。",
+    "team_title": "私たちのチーム",
+    "team_text": "ウガンダと日本で500人以上の労働者を支援し、献身と卓越性のコミュニティを育んでいます。"
+  },
+  "Shop": {
+    "title": "コレクションを購入",
+    "subscribe_toggle": "定期購入で10%OFF",
+    "categories": {
+      "liquid": "リキッドコーヒー",
+      "beans": "シングルオリジン豆",
+      "drip": "ドリップバッグ",
+      "gifts": "ギフトセット"
+    },
+    "add_to_cart": "カートに追加"
+  },
+  "Checkout": {
+    "cart_title": "カート",
+    "empty_cart": "カートは空です",
+    "continue_shopping": "買い物を続ける",
+    "subtotal": "小計",
+    "delivery_title": "配送情報",
+    "full_name": "お名前（フルネーム）",
+    "email": "メールアドレス",
+    "phone": "電話番号",
+    "address": "住所",
+    "city": "市区町村",
+    "region": "都道府県/州",
+    "country": "国",
+    "delivery_instructions": "配送に関する指示（任意）",
+    "review_title": "注文内容の確認",
+    "order_summary": "注文概要",
+    "total": "合計",
+    "delivery_details": "配送詳細",
+    "payment_section": "お支払い方法",
+    "payment_coming_soon": "お支払いは次のステップで処理されます。",
+    "payment_methods_hint": "「支払いへ進む」をクリックして注文を完了してください。",
+    "back": "戻る",
+    "continue": "次へ",
+    "place_order": "支払いへ進む",
+    "order_placed": "注文が完了しました！",
+    "order_confirmation": "ご注文ありがとうございます。",
+    "order_number": "注文番号",
+    "email_confirmation": "確認メールをまもなくお送りします。"
+  },
+  "Navigation": {
+    "home": "ホーム",
+    "about": "物語",
+    "shop": "ショップ",
+    "locations": "店舗情報",
+    "contact": "お問い合わせ"
+  },
+  "Footer": {
+    "shop": "ショップ",
+    "about": "私たちについて",
+    "support": "サポート",
+    "newsletter": "ニュースレター",
+    "newsletter_desc": "限定情報をお届けします。",
+    "email_placeholder": "メールアドレス",
+    "subscribe": "登録する",
+    "copyright": "© 2026 Uganda Coffee Shop. All rights reserved.",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約"
+  },
+  "Contact": {
+    "title": "お問い合わせ",
+    "subtitle": "お気軽にご連絡ください。",
+    "form": {
+      "name": "お名前",
+      "email": "メールアドレス",
+      "subject": "件名",
+      "message": "メッセージ",
+      "send": "送信する",
+      "types": {
+        "general": "一般のお問い合わせ",
+        "wholesale": "卸売に関するお問い合わせ",
+        "press": "プレス・メディア"
+      }
+    }
+  }
+}
