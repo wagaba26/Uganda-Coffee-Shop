@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { HandHeart, GraduationCap, HeartPulse, Droplet } from 'lucide-react';
+import { HandHeart, GraduationCap, HeartPulse, Droplet, ArrowRight } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 import { useEffect, useRef } from 'react';
 
@@ -88,6 +88,9 @@ export default function BukonzoJourneySection() {
         <div className="relative overflow-hidden">
           <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-stark-white to-transparent pointer-events-none" />
           <div className="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-stark-white to-transparent pointer-events-none" />
+          <div className="absolute right-4 top-4 z-10 rounded-full border border-charcoal/20 bg-white/90 p-2 text-charcoal shadow-sm md:hidden">
+            <ArrowRight className="h-4 w-4" />
+          </div>
           <div
             ref={scrollerRef}
             className="story-scroll flex gap-6 overflow-x-auto pb-6"
