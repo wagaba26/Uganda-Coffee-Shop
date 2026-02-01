@@ -24,12 +24,12 @@ export default async function StorePage({ params }: { params: Promise<{ locale: 
 
   return (
     <main className="min-h-screen bg-stark-white pt-20">
-      <div className="relative h-[40vh] w-full bg-gray-50">
+      <div className="relative h-[30vh] sm:h-[36vh] md:h-[40vh] w-full bg-gray-50">
         <Image
           src={store.image}
           alt={store.name[currentLocale]}
           fill
-          className="object-contain p-8"
+          className="object-contain p-4 sm:p-6 md:p-8"
           priority
         />
         <div className="absolute inset-0 bg-black/40" />

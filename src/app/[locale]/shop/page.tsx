@@ -64,7 +64,7 @@ export default function ShopPage() {
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-gray-100 pb-6 gap-6">
           <div className="w-full md:w-auto">
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-charcoal mb-4">
+            <h1 className="text-3xl md:text-5xl font-serif font-bold text-charcoal mb-4">
               {t('title')}
             </h1>
             {/* Categories */}
@@ -84,10 +84,10 @@ export default function ShopPage() {
           <div />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
           {filteredProducts.map(product => (
               <div key={product.id} className="group cursor-pointer" onClick={() => handleAddToCart(product)}>
-               <div className="aspect-[3/4] bg-gray-100 mb-4 overflow-hidden relative rounded-sm">
+               <div className="aspect-[1/1] sm:aspect-[3/4] bg-gray-100 mb-3 sm:mb-4 overflow-hidden relative rounded-sm">
                  <Image
                    src={product.image}
                    alt={product.displayName}
@@ -100,7 +100,7 @@ export default function ShopPage() {
                    </div>
                  )}
               </div>
-              <h3 className="text-xl font-serif font-medium text-charcoal mb-1">{product.displayName}</h3>
+              <h3 className="text-lg sm:text-xl font-serif font-medium text-charcoal mb-1">{product.displayName}</h3>
               <p className="text-sm text-gray-500 font-sans uppercase tracking-wide mb-2">{t(`categories.${product.category}`)}</p>
               <div className="flex justify-between items-center">
                 <div className="flex flex-col">

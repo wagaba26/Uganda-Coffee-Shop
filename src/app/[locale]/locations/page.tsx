@@ -26,7 +26,7 @@ export default async function LocationsPage({ params }: { params: Promise<{ loca
               className="group block"
             >
               <div className="bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden rounded-sm">
-                <div className="relative h-56 bg-gray-50 p-6">
+                <div className="relative h-44 sm:h-52 md:h-56 bg-gray-50 p-4 sm:p-6">
                   <Image
                     src={store.image}
                     alt={store.name[currentLocale]}
