@@ -22,10 +22,12 @@ export default function CheckoutPage() {
         fullName: orderState.deliveryInfo.fullName || '',
         email: orderState.deliveryInfo.email || '',
         phone: orderState.deliveryInfo.phone || '',
-        address: orderState.deliveryInfo.address || '',
+        postalCode: orderState.deliveryInfo.postalCode || '',
+        prefecture: orderState.deliveryInfo.prefecture || '',
         city: orderState.deliveryInfo.city || '',
-        region: orderState.deliveryInfo.region || '',
-        country: orderState.deliveryInfo.country || 'Uganda',
+        addressLine1: orderState.deliveryInfo.addressLine1 || '',
+        addressLine2: orderState.deliveryInfo.addressLine2 || '',
+        country: orderState.deliveryInfo.country || 'Japan',
         deliveryInstructions: orderState.deliveryInfo.deliveryInstructions || ''
     });
 
@@ -42,12 +44,11 @@ export default function CheckoutPage() {
         const newErrors: Partial<DeliveryInfo> = {};
 
         if (!formData.fullName.trim()) newErrors.fullName = 'Full name is required';
-        if (!formData.email.trim()) newErrors.email = 'Email is required';
-        else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Invalid email format';
-        if (!formData.phone.trim()) newErrors.phone = 'Phone number is required';
-        if (!formData.address.trim()) newErrors.address = 'Address is required';
-        if (!formData.city.trim()) newErrors.city = 'City is required';
-        if (!formData.region.trim()) newErrors.region = 'Region is required';
+        if (formData.email.trim() && !/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Invalid email format';
+        if (!formData.postalCode.trim()) newErrors.postalCode = 'Postal code is required';
+        if (!formData.prefecture.trim()) newErrors.prefecture = 'Prefecture is required';
+        if (!formData.city.trim()) newErrors.city = 'City/Ward is required';
+        if (!formData.addressLine1.trim()) newErrors.addressLine1 = 'Address is required';
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
@@ -184,6 +185,7 @@ export default function CheckoutPage() {
                                             <span className="font-serif text-charcoal">{t('subtotal')}</span>
                                             <span className="font-bold text-charcoal">{formatPrice(cartTotal)}</span>
                                         </div>
+                                        <p className="text-xs text-gray-500 mt-2">{t('free_shipping_note')}</p>
                                     </div>
                                 </>
                             )}
@@ -225,7 +227,7 @@ export default function CheckoutPage() {
                                     {/* Email */}
                                     <div>
                                         <label className="block text-sm font-medium text-charcoal mb-2">
-                                            {t('email')} *
+                                            {t('email')}
                                         </label>
                                         <input
                                             type="email"
@@ -242,7 +244,7 @@ export default function CheckoutPage() {
                                     {/* Phone */}
                                     <div>
                                         <label className="block text-sm font-medium text-charcoal mb-2">
-                                            {t('phone')} *
+                                            {t('phone')}
                                         </label>
                                         <input
                                             type="tel"
@@ -253,24 +255,72 @@ export default function CheckoutPage() {
                                                 }`}
                                             placeholder="+256 700 000 000"
                                         />
-                                        {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
+                                    </div>
+
+                                    {/* Postal Code */}
+                                    <div>
+                                        <label className="block text-sm font-medium text-charcoal mb-2">
+                                            {t('postal_code')} *
+                                        </label>
+                                        <input
+                                            type="text"
+                                            name="postalCode"
+                                            value={formData.postalCode}
+                                            onChange={handleInputChange}
+                                            className={`w-full px-4 py-3 border rounded-sm focus:outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition-colors ${errors.postalCode ? 'border-red-500' : 'border-gray-200'
+                                                }`}
+                                            placeholder="123-4567"
+                                        />
+                                        {errors.postalCode && <p className="text-red-500 text-xs mt-1">{errors.postalCode}</p>}
+                                    </div>
+
+                                    {/* Prefecture */}
+                                    <div>
+                                        <label className="block text-sm font-medium text-charcoal mb-2">
+                                            {t('prefecture')} *
+                                        </label>
+                                        <input
+                                            type="text"
+                                            name="prefecture"
+                                            value={formData.prefecture}
+                                            onChange={handleInputChange}
+                                            className={`w-full px-4 py-3 border rounded-sm focus:outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition-colors ${errors.prefecture ? 'border-red-500' : 'border-gray-200'
+                                                }`}
+                                            placeholder="Tokyo"
+                                        />
+                                        {errors.prefecture && <p className="text-red-500 text-xs mt-1">{errors.prefecture}</p>}
                                     </div>
 
                                     {/* Address */}
                                     <div className="md:col-span-2">
                                         <label className="block text-sm font-medium text-charcoal mb-2">
-                                            {t('address')} *
+                                            {t('address_line1')} *
                                         </label>
                                         <input
                                             type="text"
-                                            name="address"
-                                            value={formData.address}
+                                            name="addressLine1"
+                                            value={formData.addressLine1}
                                             onChange={handleInputChange}
-                                            className={`w-full px-4 py-3 border rounded-sm focus:outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition-colors ${errors.address ? 'border-red-500' : 'border-gray-200'
+                                            className={`w-full px-4 py-3 border rounded-sm focus:outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition-colors ${errors.addressLine1 ? 'border-red-500' : 'border-gray-200'
                                                 }`}
-                                            placeholder="Street address, apartment, etc."
+                                            placeholder="Chiyoda 1-1-1"
                                         />
-                                        {errors.address && <p className="text-red-500 text-xs mt-1">{errors.address}</p>}
+                                        {errors.addressLine1 && <p className="text-red-500 text-xs mt-1">{errors.addressLine1}</p>}
+                                    </div>
+
+                                    {/* Address Line 2 */}
+                                    <div className="md:col-span-2">
+                                        <label className="block text-sm font-medium text-charcoal mb-2">
+                                            {t('address_line2')}
+                                        </label>
+                                        <input
+                                            type="text"
+                                            name="addressLine2"
+                                            value={formData.addressLine2}
+                                            onChange={handleInputChange}
+                                            className="w-full px-4 py-3 border border-gray-200 rounded-sm focus:outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition-colors"
+                                            placeholder="Building, floor, room (optional)"
+                                        />
                                     </div>
 
                                     {/* City */}
@@ -285,26 +335,9 @@ export default function CheckoutPage() {
                                             onChange={handleInputChange}
                                             className={`w-full px-4 py-3 border rounded-sm focus:outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition-colors ${errors.city ? 'border-red-500' : 'border-gray-200'
                                                 }`}
-                                            placeholder="City"
+                                            placeholder="Shibuya-ku"
                                         />
                                         {errors.city && <p className="text-red-500 text-xs mt-1">{errors.city}</p>}
-                                    </div>
-
-                                    {/* Region */}
-                                    <div>
-                                        <label className="block text-sm font-medium text-charcoal mb-2">
-                                            {t('region')} *
-                                        </label>
-                                        <input
-                                            type="text"
-                                            name="region"
-                                            value={formData.region}
-                                            onChange={handleInputChange}
-                                            className={`w-full px-4 py-3 border rounded-sm focus:outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition-colors ${errors.region ? 'border-red-500' : 'border-gray-200'
-                                                }`}
-                                            placeholder="Region/District"
-                                        />
-                                        {errors.region && <p className="text-red-500 text-xs mt-1">{errors.region}</p>}
                                     </div>
 
                                     {/* Country */}
@@ -318,10 +351,7 @@ export default function CheckoutPage() {
                                             onChange={handleInputChange}
                                             className="w-full px-4 py-3 border border-gray-200 rounded-sm focus:outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition-colors bg-white"
                                         >
-                                            <option value="Uganda">Uganda</option>
-                                            <option value="Kenya">Kenya</option>
-                                            <option value="Tanzania">Tanzania</option>
-                                            <option value="Rwanda">Rwanda</option>
+                                            <option value="Japan">Japan</option>
                                         </select>
                                     </div>
 
@@ -375,6 +405,7 @@ export default function CheckoutPage() {
                                         <span className="font-serif text-lg text-charcoal">{t('total')}</span>
                                         <span className="font-bold text-xl text-brand-red">{formatPrice(cartTotal)}</span>
                                     </div>
+                                    <p className="text-xs text-gray-500 mt-2">{t('free_shipping_note')}</p>
                                 </div>
 
                                 {/* Delivery Details */}
@@ -398,8 +429,12 @@ export default function CheckoutPage() {
                                         <div>
                                             <p className="text-gray-500">{t('address')}</p>
                                             <p className="font-medium text-charcoal">
-                                                {formData.address}, {formData.city}, {formData.region}, {formData.country}
+                                                {formData.postalCode} {formData.prefecture} {formData.city}
                                             </p>
+                                            <p className="font-medium text-charcoal">{formData.addressLine1}</p>
+                                            {formData.addressLine2 && (
+                                                <p className="font-medium text-charcoal">{formData.addressLine2}</p>
+                                            )}
                                         </div>
                                         {formData.deliveryInstructions && (
                                             <div className="md:col-span-2">

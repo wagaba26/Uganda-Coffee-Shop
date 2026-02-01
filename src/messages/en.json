@@ -40,9 +40,12 @@
       "liquid": "Liquid Coffee",
       "beans": "Single Origin Beans",
       "drip": "Drip Bags",
+      "ground": "Ground Coffee",
       "gifts": "Gift Sets"
     },
-    "add_to_cart": "Add to Cart"
+    "add_to_cart": "Add to Cart",
+    "member_badge": "Member",
+    "member_pricing": "Member pricing available"
   },
   "Checkout": {
     "cart_title": "Your Cart",
@@ -51,10 +54,14 @@
     "subtotal": "Subtotal",
     "delivery_title": "Delivery Information",
     "full_name": "Full Name",
-    "email": "Email Address",
-    "phone": "Phone Number",
-    "address": "Street Address",
-    "city": "City",
+    "email": "Email Address (optional)",
+    "phone": "Mobile Number (optional)",
+    "postal_code": "Postal Code",
+    "prefecture": "Prefecture",
+    "address": "Address",
+    "address_line1": "Address Line 1",
+    "address_line2": "Address Line 2 (optional)",
+    "city": "City/Ward",
     "region": "Region/District",
     "country": "Country",
     "delivery_instructions": "Delivery Instructions",
@@ -71,19 +78,22 @@
     "order_placed": "Order Placed Successfully!",
     "order_confirmation": "Thank you for your order.",
     "order_number": "Order Number",
-    "email_confirmation": "A confirmation email will be sent to you shortly."
+    "email_confirmation": "A confirmation email will be sent to you shortly.",
+    "free_shipping_note": "Free shipping for orders over ¥14,000"
   },
   "Navigation": {
     "home": "Home",
     "about": "About",
     "shop": "Shop",
     "locations": "Locations",
+    "membership": "Membership",
     "contact": "Contact"
   },
   "Footer": {
     "shop": "Shop",
     "about": "About",
     "support": "Support",
+    "membership": "Membership",
     "newsletter": "Stay Connected",
     "newsletter_desc": "Join our community for exclusive updates.",
     "email_placeholder": "Your email address",
@@ -106,6 +116,99 @@
         "wholesale": "Wholesale Inquiry",
         "press": "Press/Media"
       }
+    }
+  },
+  "Membership": {
+    "title": "Memberships & Subscriptions",
+    "subtitle": "Natural Uganda coffee, delivered with care.",
+    "intro_title": "UGANDA Coffee Shop",
+    "intro_body": "At UGANDA Coffee Shop, we aim to promote international exchange through the concept of fair trade by delivering authentic coffee from Uganda, known as the Pearl of Africa.",
+    "intro_body_2": "We work directly with Ugandan farmers to bring you exceptional quality coffee while supporting global connections. We warmly invite you to experience the true taste of Uganda coffee.",
+    "features_title": "Features of Uganda Coffee",
+    "features": [
+      "Fair-trade coffee grown naturally with great care.",
+      "Only fully ripened coffee cherries are hand-picked one by one.",
+      "100% natural: no pesticides or chemical fertilizers.",
+      "Grown with sustainable agroforestry that protects biodiversity.",
+      "Refreshing acidity, mild richness, and sweet citrus-like aromas."
+    ],
+    "membership_title": "Membership Benefits",
+    "membership_body": "Fresh coffee delivered to your home every month with our subscription plans.",
+    "membership_body_2": "All subscription prices include tax and shipping.",
+    "price_list": {
+      "title": "Coffee Beans & Ground Coffee Price List",
+      "one_time": {
+        "title": "One-time Purchase",
+        "beans_title": "100g / 1 bag",
+        "beans": [
+          "1 bag: ¥1,650 (tax incl.)",
+          "5 bags: ¥1,600 per bag (tax incl.)"
+        ],
+        "drip_title": "10g / Drip Pack",
+        "drip": [
+          "1 pack: ¥350 (tax incl.)",
+          "Box (10 packs): ¥3,300 (tax incl.)"
+        ],
+        "shipping_note": "Free shipping for orders over ¥14,000"
+      },
+      "liquid_title": "Terimba Coffee (Liquid 1L)",
+      "liquid": [
+        "1L × 1 pack: ¥2,480 (tax incl.)",
+        "1L × 12 packs: ¥26,400 (tax incl.)"
+      ],
+      "liquid_note": "Shipping fees apply except for in-store purchases"
+    },
+    "subscriptions": {
+      "title": "Subscription Plans",
+      "subtitle": "Fresh coffee delivered to your home every month.",
+      "beans_title": "Beans / Ground Coffee",
+      "beans": [
+        "2 bags: ¥3,000 / month",
+        "5 bags: ¥7,000 / month",
+        "10 bags: ¥13,000 / month"
+      ],
+      "liquid_title": "Liquid Coffee (1L)",
+      "liquid": [
+        "1 pack: ¥2,200 / month",
+        "12 packs: ¥24,000 / month"
+      ],
+      "note": "All subscription prices include tax and shipping"
+    },
+    "green_beans": {
+      "title": "Green Coffee Beans",
+      "list": [
+        "1kg: ¥3,000 (tax incl., shipping not included)"
+      ],
+      "note": "Large-volume orders (1 ton or more) are available for corporate customers."
+    },
+    "contact": {
+      "title": "Orders & Inquiries",
+      "phone": "TEL / FAX: 0836-43-7422",
+      "email": "Email: info@ugandacoffeeshop.jp",
+      "cta": "We invite you to experience the taste of Uganda coffee."
+    },
+    "auth": {
+      "title": "Members Only",
+      "subtitle": "Sign in to access subscriptions and member pricing.",
+      "email_label": "Email",
+      "password_label": "Password",
+      "phone_label": "Japanese Mobile Number",
+      "phone_hint": "Enter a Japanese number (e.g., 090-1234-5678). We'll send an SMS code.",
+      "code_label": "Verification Code",
+      "code_placeholder": "Enter the SMS code",
+      "send_code": "Send SMS Code",
+      "verify_code": "Verify Code",
+      "edit_phone": "Edit phone number",
+      "sign_in": "Sign In",
+      "sign_up": "Create Account",
+      "switch_to_signup": "Need an account? Sign up",
+      "switch_to_signin": "Already have an account? Sign in",
+      "sign_out": "Sign Out",
+      "loading": "Checking membership access...",
+      "missing_env": "Supabase environment variables are missing. Add NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY.",
+      "sms_sent": "SMS code sent. Please check your phone.",
+      "sms_verified": "Phone verified. You're signed in.",
+      "signup_success": "Account created. Please check your email for confirmation if required."
     }
   }
 }

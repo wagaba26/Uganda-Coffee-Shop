@@ -6,9 +6,11 @@ export interface DeliveryInfo {
     fullName: string;
     email: string;
     phone: string;
-    address: string;
+    postalCode: string;
+    prefecture: string;
     city: string;
-    region: string;
+    addressLine1: string;
+    addressLine2: string;
     country: string;
     deliveryInstructions: string;
 }
@@ -30,10 +32,12 @@ const defaultDeliveryInfo: DeliveryInfo = {
     fullName: '',
     email: '',
     phone: '',
-    address: '',
+    postalCode: '',
+    prefecture: '',
     city: '',
-    region: '',
-    country: 'Uganda',
+    addressLine1: '',
+    addressLine2: '',
+    country: 'Japan',
     deliveryInstructions: ''
 };
 

@@ -26,14 +26,14 @@ export default function LanguageSwitcher({ textColor = 'text-charcoal' }: Langua
         onClick={() => switchLocale('en')}
         className={`${locale === 'en' ? activeColor : `${inactiveColor} hover:opacity-70`} transition-colors`}
       >
-        EN
+        English
       </button>
       <span className={separatorColor}>|</span>
       <button
         onClick={() => switchLocale('ja')}
         className={`${locale === 'ja' ? activeColor : `${inactiveColor} hover:opacity-70`} transition-colors`}
       >
-        JP
+        日本語
       </button>
     </div>
   );

@@ -36,6 +36,7 @@ export default function Footer() {
               <li><Link href="/shop?category=beans" className="hover:text-white transition-colors">Beans</Link></li>
               <li><Link href="/shop?category=drip" className="hover:text-white transition-colors">Drip Bags</Link></li>
               <li><Link href="/shop?category=gift" className="hover:text-white transition-colors">Gifts</Link></li>
+              <li><Link href="/membership" className="hover:text-white transition-colors">{t('membership')}</Link></li>
             </ul>
           </div>
 

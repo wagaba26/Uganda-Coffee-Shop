@@ -69,6 +69,9 @@ export default function Header() {
             <Link href="/shop" className={`text-sm font-sans font-medium hover:text-brand-red transition-colors uppercase tracking-wide ${textColor}`}>
               {t('shop')}
             </Link>
+            <Link href="/membership" className={`text-sm font-sans font-medium hover:text-brand-red transition-colors uppercase tracking-wide ${textColor}`}>
+              {t('membership')}
+            </Link>
             <Link href="/locations" className={`text-sm font-sans font-medium hover:text-brand-red transition-colors uppercase tracking-wide ${textColor}`}>
               {t('locations')}
             </Link>
@@ -164,6 +167,13 @@ export default function Header() {
                   className="text-lg font-serif font-medium text-charcoal hover:text-brand-red transition-colors"
                 >
                   {t('shop')}
+                </Link>
+                <Link
+                  href="/membership"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-lg font-serif font-medium text-charcoal hover:text-brand-red transition-colors"
+                >
+                  {t('membership')}
                 </Link>
                 <Link
                   href="/locations"

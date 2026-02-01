@@ -40,9 +40,12 @@
       "liquid": "リキッドコーヒー",
       "beans": "シングルオリジン豆",
       "drip": "ドリップバッグ",
+      "ground": "粉コーヒー",
       "gifts": "ギフトセット"
     },
-    "add_to_cart": "カートに追加"
+    "add_to_cart": "カートに追加",
+    "member_badge": "メンバー",
+    "member_pricing": "メンバー価格あり"
   },
   "Checkout": {
     "cart_title": "カート",
@@ -51,9 +54,13 @@
     "subtotal": "小計",
     "delivery_title": "配送情報",
     "full_name": "お名前（フルネーム）",
-    "email": "メールアドレス",
-    "phone": "電話番号",
+    "email": "メールアドレス（任意）",
+    "phone": "携帯番号（任意）",
+    "postal_code": "郵便番号",
+    "prefecture": "都道府県",
     "address": "住所",
+    "address_line1": "住所1",
+    "address_line2": "住所2（建物名・部屋番号など）",
     "city": "市区町村",
     "region": "都道府県/州",
     "country": "国",
@@ -71,19 +78,22 @@
     "order_placed": "注文が完了しました！",
     "order_confirmation": "ご注文ありがとうございます。",
     "order_number": "注文番号",
-    "email_confirmation": "確認メールをまもなくお送りします。"
+    "email_confirmation": "確認メールをまもなくお送りします。",
+    "free_shipping_note": "14,000円以上のご注文で送料無料"
   },
   "Navigation": {
     "home": "ホーム",
     "about": "物語",
     "shop": "ショップ",
     "locations": "店舗情報",
+    "membership": "メンバーシップ",
     "contact": "お問い合わせ"
   },
   "Footer": {
     "shop": "ショップ",
     "about": "私たちについて",
     "support": "サポート",
+    "membership": "メンバーシップ",
     "newsletter": "ニュースレター",
     "newsletter_desc": "限定情報をお届けします。",
     "email_placeholder": "メールアドレス",
@@ -106,6 +116,99 @@
         "wholesale": "卸売に関するお問い合わせ",
         "press": "プレス・メディア"
       }
+    }
+  },
+  "Membership": {
+    "title": "メンバーシップ＆サブスクリプション",
+    "subtitle": "100%ナチュラルなウガンダコーヒーを、毎月お届けします。",
+    "intro_title": "UGANDA Coffee Shop",
+    "intro_body": "弊社では、アフリカの真珠と呼ばれるウガンダより「ほんもの」のコーヒーを通して、フェアトレードのコンセプトを国際交流活動に取り込みたいと考えています。",
+    "intro_body_2": "ウガンダの農家たちから直接お届けする美味しさを通じて、国際交流活動を行っています。ぜひウガンダコーヒーを味わってみてください。",
+    "features_title": "ウガンダコーヒーの特徴",
+    "features": [
+      "自然栽培で大切に育てられたフェアトレードコーヒーです。",
+      "完熟したコーヒーチェリーのみを選び、一粒一粒手摘み。",
+      "農薬不使用・無施肥の100%ナチュラル。",
+      "生態系を守るアグロフォレストリーで栽培。",
+      "爽やかな酸味、柔らかなコク、柑橘系の甘い香り。"
+    ],
+    "membership_title": "メンバーシップ特典",
+    "membership_body": "毎月ご自宅まで美味しさをお届けします。",
+    "membership_body_2": "サブスクリプション価格は税込・送料込みです。",
+    "price_list": {
+      "title": "豆・粉 料金表",
+      "one_time": {
+        "title": "単品購入",
+        "beans_title": "100g / 1袋",
+        "beans": [
+          "1袋: 1,650円（税込）",
+          "5袋: 1袋あたり1,600円（税込）"
+        ],
+        "drip_title": "10g / ドリップパック",
+        "drip": [
+          "1パック: 350円（税込）",
+          "10パック入り: 3,300円（税込）"
+        ],
+        "shipping_note": "14,000円以上のご注文で送料無料"
+      },
+      "liquid_title": "テリンバ珈琲（リキッド 1L）",
+      "liquid": [
+        "1L × 1パック: 2,480円（税込）",
+        "1L × 12パック: 26,400円（税込）"
+      ],
+      "liquid_note": "店頭販売以外は送料がかかります"
+    },
+    "subscriptions": {
+      "title": "サブスクリプション購入",
+      "subtitle": "毎月ご自宅まで美味しさをお届けします。",
+      "beans_title": "豆 / 粉",
+      "beans": [
+        "2袋: 3,000円 / 月",
+        "5袋: 7,000円 / 月",
+        "10袋: 13,000円 / 月"
+      ],
+      "liquid_title": "リキッドコーヒー（1L）",
+      "liquid": [
+        "1パック: 2,200円 / 月",
+        "12パック: 24,000円 / 月"
+      ],
+      "note": "サブスクリプション価格は税込・送料込みです"
+    },
+    "green_beans": {
+      "title": "生豆（グリーンビーンズ）",
+      "list": [
+        "1kg: 3,000円（税込・送料別）"
+      ],
+      "note": "法人向けに1トン以上の大口注文も承ります。"
+    },
+    "contact": {
+      "title": "ご注文・お問い合わせ",
+      "phone": "TEL / FAX: 0836-43-7422",
+      "email": "Email: info@ugandacoffeeshop.jp",
+      "cta": "ぜひウガンダコーヒーを味わってみてください"
+    },
+    "auth": {
+      "title": "メンバー専用",
+      "subtitle": "サブスクリプションと会員価格にアクセスするにはログインしてください。",
+      "email_label": "メールアドレス",
+      "password_label": "パスワード",
+      "phone_label": "日本の携帯番号",
+      "phone_hint": "例: 090-1234-5678。SMSで認証コードを送信します。",
+      "code_label": "認証コード",
+      "code_placeholder": "SMSのコードを入力",
+      "send_code": "SMSコードを送信",
+      "verify_code": "コードを確認",
+      "edit_phone": "電話番号を修正",
+      "sign_in": "ログイン",
+      "sign_up": "アカウント作成",
+      "switch_to_signup": "アカウントをお持ちでない方はこちら",
+      "switch_to_signin": "すでにアカウントをお持ちの方はこちら",
+      "sign_out": "ログアウト",
+      "loading": "メンバー権限を確認中...",
+      "missing_env": "Supabaseの環境変数が未設定です。NEXT_PUBLIC_SUPABASE_URL と NEXT_PUBLIC_SUPABASE_ANON_KEY を追加してください。",
+      "sms_sent": "SMSコードを送信しました。ご確認ください。",
+      "sms_verified": "認証が完了しました。ログイン済みです。",
+      "signup_success": "アカウントを作成しました。必要に応じて確認メールをご確認ください。"
     }
   }
 }
