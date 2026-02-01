@@ -71,7 +71,7 @@ export default async function StorePage({ params }: { params: Promise<{ locale: 
         <div className="md:col-span-2 space-y-12">
           {/* Contact Form Placeholder */}
           <div className="bg-white border border-gray-100 p-8 shadow-sm">
-            <h3 className="text-2xl font-serif font-bold text-charcoal mb-6">Inquiries</h3>
+            <h3 className="text-2xl font-serif font-bold text-charcoal mb-6">{t('inquiries_title')}</h3>
             <StoreContactForm />
           </div>
         </div>

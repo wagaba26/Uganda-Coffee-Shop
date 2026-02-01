@@ -48,7 +48,7 @@ export default async function LocationsPage({ params }: { params: Promise<{ loca
                       rel="noopener noreferrer"
                       className="text-xs font-medium uppercase tracking-widest text-charcoal border border-charcoal px-4 py-2 hover:bg-charcoal hover:text-white transition-colors"
                     >
-                      Instagram
+                      {t('instagram_cta')}
                     </a>
                     <span className="text-sm font-medium text-brand-red">
                       {t('view_details')} →

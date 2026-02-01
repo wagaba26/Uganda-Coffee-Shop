@@ -25,6 +25,8 @@
     "city_label": "City",
     "contact_label": "Address / Contact",
     "instagram_label": "Instagram",
+    "instagram_cta": "Instagram",
+    "inquiries_title": "Inquiries",
     "get_directions": "Get Directions",
     "hours": "Hours",
     "address": "Address"
@@ -33,6 +35,9 @@
     "title": "The Mwanyi Terimba Story",
     "heritage_title": "A Legacy of Prosperity",
     "heritage_text": "Inspired by the Kabaka of Buganda's mission for prosperity, we strive to bring the finest Ugandan coffee to the world.",
+    "intro_title": "UGANDA Coffee Shop",
+    "intro_body": "At UGANDA Coffee Shop, we aim to promote international exchange through the concept of fair trade by delivering authentic coffee from Uganda, known as the Pearl of Africa.",
+    "intro_body_2": "We work directly with Ugandan farmers to bring you exceptional quality coffee while supporting global connections. We warmly invite you to experience the true taste of Uganda coffee.",
     "team_title": "Our People",
     "team_text": "Supporting 500+ workers across Uganda and Japan, fostering a community of dedication and excellence.",
     "features_title": "Features of Uganda Coffee",
@@ -202,9 +207,6 @@
   "Membership": {
     "title": "Memberships & Subscriptions",
     "subtitle": "Natural Uganda coffee, delivered with care.",
-    "intro_title": "UGANDA Coffee Shop",
-    "intro_body": "At UGANDA Coffee Shop, we aim to promote international exchange through the concept of fair trade by delivering authentic coffee from Uganda, known as the Pearl of Africa.",
-    "intro_body_2": "We work directly with Ugandan farmers to bring you exceptional quality coffee while supporting global connections. We warmly invite you to experience the true taste of Uganda coffee.",
     "membership_title": "Membership Benefits",
     "membership_body": "Fresh coffee delivered to your home every month with our subscription plans.",
     "membership_body_2": "All subscription prices include tax and shipping.",

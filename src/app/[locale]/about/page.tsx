@@ -35,10 +35,25 @@ export default function AboutPage() {
               </p>
               <div className="pt-4 border-l-4 border-brand-red pl-6">
                 <p className="font-serif italic text-xl text-charcoal">
-                  "Prosperity for all through the land's bounty."
+                  &ldquo;Prosperity for all through the land&apos;s bounty.&rdquo;
                 </p>
               </div>
            </div>
+        </section>
+
+        {/* Uganda Coffee Shop Section */}
+        <section className="bg-white border border-gray-100 shadow-sm p-8 md:p-10">
+          <div className="max-w-3xl space-y-4">
+            <h2 className="text-3xl font-serif font-bold text-charcoal">
+              {t('intro_title')}
+            </h2>
+            <p className="text-gray-700 font-sans leading-relaxed">
+              {t('intro_body')}
+            </p>
+            <p className="text-gray-700 font-sans leading-relaxed">
+              {t('intro_body_2')}
+            </p>
+          </div>
         </section>
 
         {/* Features Section */}
@@ -74,7 +89,7 @@ export default function AboutPage() {
                 {Array.from({ length: 500 }).map((_, i) => (
                   <div 
                     key={i} 
-                    className={`w-3 h-3 rounded-[1px] ${Math.random() > 0.9 ? 'bg-brand-red' : 'bg-charcoal'}`} 
+                    className={`w-3 h-3 rounded-[1px] ${i % 10 === 0 ? 'bg-brand-red' : 'bg-charcoal'}`} 
                   />
                 ))}
               </div>

@@ -50,22 +50,30 @@ const defaultOrderState: OrderState = {
 const OrderContext = createContext<OrderContextType | undefined>(undefined);
 
 export function OrderProvider({ children }: { children: React.ReactNode }) {
-    const [orderState, setOrderState] = useState<OrderState>(defaultOrderState);
-
-    // Load order state from localStorage on mount
-    useEffect(() => {
-        const savedOrder = localStorage.getItem('uganda-coffee-order');
-        if (savedOrder) {
-            try {
-                setOrderState(JSON.parse(savedOrder));
-            } catch (e) {
-                console.error('Failed to parse order state', e);
-            }
+    const [orderState, setOrderState] = useState<OrderState>(() => {
+        if (typeof window === 'undefined') {
+            return defaultOrderState;
         }
-    }, []);
+
+        const savedOrder = localStorage.getItem('uganda-coffee-order');
+        if (!savedOrder) {
+            return defaultOrderState;
+        }
+
+        try {
+            return JSON.parse(savedOrder) as OrderState;
+        } catch (e) {
+            console.error('Failed to parse order state', e);
+            return defaultOrderState;
+        }
+    });
 
     // Save order state to localStorage whenever it changes
     useEffect(() => {
+        if (typeof window === 'undefined') {
+            return;
+        }
+
         localStorage.setItem('uganda-coffee-order', JSON.stringify(orderState));
     }, [orderState]);
 

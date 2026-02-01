@@ -75,7 +75,7 @@ export default function ShopPage() {
                   onClick={() => setCategoryFilter(cat)}
                   className={`text-sm font-sans uppercase tracking-widest transition-colors whitespace-nowrap pb-1 ${categoryFilter === cat ? 'text-brand-red border-b-2 border-brand-red' : 'text-gray-400 hover:text-charcoal'}`}
                 >
-                  {cat === 'all' ? 'All' : t(`categories.${cat}` as any)}
+                  {cat === 'all' ? 'All' : t(`categories.${cat}`)}
                 </button>
               ))}
             </div>
@@ -101,7 +101,7 @@ export default function ShopPage() {
                  )}
               </div>
               <h3 className="text-xl font-serif font-medium text-charcoal mb-1">{product.displayName}</h3>
-              <p className="text-sm text-gray-500 font-sans uppercase tracking-wide mb-2">{t(`categories.${product.category}` as any)}</p>
+              <p className="text-sm text-gray-500 font-sans uppercase tracking-wide mb-2">{t(`categories.${product.category}`)}</p>
               <div className="flex justify-between items-center">
                 <div className="flex flex-col">
                    <span className="text-lg font-medium text-charcoal">

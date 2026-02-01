@@ -14,7 +14,7 @@ type CheckoutStep = 'cart' | 'delivery' | 'review' | 'complete';
 export default function CheckoutPage() {
     const t = useTranslations('Checkout');
     const { items, cartTotal, clearCart } = useCart();
-    const { orderState, setDeliveryInfo, placeOrder, clearOrder } = useOrder();
+    const { orderState, setDeliveryInfo, placeOrder } = useOrder();
     const [currentStep, setCurrentStep] = useState<CheckoutStep>('cart');
     const [orderNumber, setOrderNumber] = useState<string | null>(null);
 

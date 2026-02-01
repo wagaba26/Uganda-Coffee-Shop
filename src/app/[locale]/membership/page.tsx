@@ -26,18 +26,6 @@ export default function MembershipPage() {
         </header>
 
         <MembershipGate mode="panel">
-          <section className="bg-white border border-gray-100 shadow-sm p-8 md:p-10 mb-12">
-            <h2 className="text-2xl font-serif font-bold text-charcoal mb-4">
-              {t('intro_title')}
-            </h2>
-            <p className="text-gray-700 font-sans leading-relaxed mb-6">
-              {t('intro_body')}
-            </p>
-            <p className="text-gray-700 font-sans leading-relaxed">
-              {t('intro_body_2')}
-            </p>
-          </section>
-
           <section className="bg-gray-50 border border-gray-100 p-8 md:p-10 mb-12">
             <h3 className="text-xl font-serif font-bold text-charcoal mb-4">
               {t('membership_title')}

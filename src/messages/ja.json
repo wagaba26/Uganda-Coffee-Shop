@@ -25,6 +25,8 @@
     "city_label": "市区町村",
     "contact_label": "住所・連絡先",
     "instagram_label": "Instagram",
+    "instagram_cta": "Instagram",
+    "inquiries_title": "お問い合わせ",
     "get_directions": "道順を表示",
     "hours": "営業時間",
     "address": "住所"
@@ -33,6 +35,9 @@
     "title": "Mwanyi Terimbaの物語",
     "heritage_title": "繁栄の遺産",
     "heritage_text": "ブガンダのカバカ（王）の繁栄への使命に触発され、私たちは最高級のウガンダコーヒーを世界に届けるよう努めています。",
+    "intro_title": "UGANDA Coffee Shop",
+    "intro_body": "弊社では、アフリカの真珠と呼ばれるウガンダより「ほんもの」のコーヒーを通して、フェアトレードのコンセプトを国際交流活動に取り込みたいと考えています。",
+    "intro_body_2": "ウガンダの農家たちから直接お届けする美味しさを通じて、国際交流活動を行っています。ぜひウガンダコーヒーを味わってみてください。",
     "team_title": "私たちのチーム",
     "team_text": "ウガンダと日本で500人以上の労働者を支援し、献身と卓越性のコミュニティを育んでいます。",
     "features_title": "ウガンダコーヒーの特徴",
@@ -202,9 +207,6 @@
   "Membership": {
     "title": "メンバーシップ＆サブスクリプション",
     "subtitle": "100%ナチュラルなウガンダコーヒーを、毎月お届けします。",
-    "intro_title": "UGANDA Coffee Shop",
-    "intro_body": "弊社では、アフリカの真珠と呼ばれるウガンダより「ほんもの」のコーヒーを通して、フェアトレードのコンセプトを国際交流活動に取り込みたいと考えています。",
-    "intro_body_2": "ウガンダの農家たちから直接お届けする美味しさを通じて、国際交流活動を行っています。ぜひウガンダコーヒーを味わってみてください。",
     "membership_title": "メンバーシップ特典",
     "membership_body": "毎月ご自宅まで美味しさをお届けします。",
     "membership_body_2": "サブスクリプション価格は税込・送料込みです。",
