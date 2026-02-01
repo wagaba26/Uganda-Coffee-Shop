@@ -45,16 +45,21 @@ export default function Hero() {
           {t('hero_subtitle')}
         </motion.p>
 
-        <motion.button
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-brand-red text-white px-10 py-4 text-sm font-medium tracking-widest uppercase hover:bg-red-700 transition-colors shadow-lg"
+          className="inline-flex"
         >
-          {t('explore')}
-        </motion.button>
+          <Link
+            href="/shop"
+            className="bg-brand-red text-white px-10 py-4 text-sm font-medium tracking-widest uppercase hover:bg-red-700 transition-colors shadow-lg"
+          >
+            {t('explore')}
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

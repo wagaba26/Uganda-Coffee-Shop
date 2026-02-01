@@ -6,8 +6,15 @@ import { createSupabaseClient } from '@/lib/supabaseClient';
 
 type AuthMode = 'signin' | 'signup';
 type SmsStep = 'idle' | 'sent';
+type GateMode = 'gate' | 'panel';
 
-export default function MembershipGate({ children }: { children: React.ReactNode }) {
+export default function MembershipGate({
+  children,
+  mode = 'gate'
+}: {
+  children?: React.ReactNode;
+  mode?: GateMode;
+}) {
   const t = useTranslations('Membership.auth');
   const supabase = useMemo(() => createSupabaseClient(), []);
   const [sessionActive, setSessionActive] = useState(false);
@@ -111,37 +118,7 @@ export default function MembershipGate({ children }: { children: React.ReactNode
     await supabase.auth.signOut();
   };
 
-  if (loading) {
-    return (
-      <div className="py-16 text-center text-gray-500 font-sans">{t('loading')}</div>
-    );
-  }
-
-  if (!supabase) {
-    return (
-      <div className="py-16 text-center text-red-600 font-sans">
-        {t('missing_env')}
-      </div>
-    );
-  }
-
-  if (sessionActive) {
-    return (
-      <div className="space-y-8">
-        <div className="flex justify-end">
-          <button
-            onClick={handleSignOut}
-            className="text-sm uppercase tracking-widest text-brand-red hover:underline"
-          >
-            {t('sign_out')}
-          </button>
-        </div>
-        {children}
-      </div>
-    );
-  }
-
-  return (
+  const authPanel = (
     <div className="bg-white border border-gray-100 shadow-sm p-8 md:p-10">
       <h2 className="text-2xl font-serif font-bold text-charcoal mb-2">{t('title')}</h2>
       <p className="text-gray-600 font-sans mb-8">{t('subtitle')}</p>
@@ -251,4 +228,63 @@ export default function MembershipGate({ children }: { children: React.ReactNode
       )}
     </div>
   );
+
+  if (loading) {
+    return (
+      <div className="space-y-8">
+        <div className="py-10 text-center text-gray-500 font-sans">{t('loading')}</div>
+        {mode === 'panel' ? children : null}
+      </div>
+    );
+  }
+
+  if (!supabase) {
+    return (
+      <div className="space-y-8">
+        <div className="py-10 text-center text-red-600 font-sans">
+          {t('missing_env')}
+        </div>
+        {mode === 'panel' ? children : null}
+      </div>
+    );
+  }
+
+  if (mode === 'panel') {
+    return (
+      <div className="space-y-10">
+        {sessionActive ? (
+          <div className="flex items-center justify-between bg-gray-50 border border-gray-100 px-6 py-4">
+            <p className="text-sm font-sans text-gray-600">{t('signed_in')}</p>
+            <button
+              onClick={handleSignOut}
+              className="text-xs uppercase tracking-widest text-brand-red hover:underline"
+            >
+              {t('sign_out')}
+            </button>
+          </div>
+        ) : (
+          authPanel
+        )}
+        {children}
+      </div>
+    );
+  }
+
+  if (sessionActive) {
+    return (
+      <div className="space-y-8">
+        <div className="flex justify-end">
+          <button
+            onClick={handleSignOut}
+            className="text-sm uppercase tracking-widest text-brand-red hover:underline"
+          >
+            {t('sign_out')}
+          </button>
+        </div>
+        {children}
+      </div>
+    );
+  }
+
+  return authPanel;
 }

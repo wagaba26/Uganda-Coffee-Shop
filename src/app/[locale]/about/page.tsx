@@ -3,6 +3,7 @@ import Image from 'next/image';
 
 export default function AboutPage() {
   const t = useTranslations('About');
+  const features = t.raw('features') as string[];
 
   return (
     <main className="min-h-screen pt-24 pb-16 bg-stark-white">
@@ -38,6 +39,23 @@ export default function AboutPage() {
                 </p>
               </div>
            </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="bg-gray-50 border border-gray-100 p-8 md:p-12">
+          <div className="max-w-3xl">
+            <h2 className="text-3xl font-serif font-bold text-charcoal mb-6">
+              {t('features_title')}
+            </h2>
+            <ul className="space-y-3 text-gray-700 font-sans">
+              {features.map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <span className="mt-2 w-1.5 h-1.5 bg-brand-red rounded-full" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </section>
 
         {/* Team Section - 500+ Grid */}

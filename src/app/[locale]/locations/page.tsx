@@ -25,26 +25,31 @@ export default async function LocationsPage({ params }: { params: Promise<{ loca
               href={`/locations/${store.slug}`}
               className="group block"
             >
-              <div className="bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
-                <div className="relative h-64 overflow-hidden">
+              <div className="bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden rounded-sm">
+                <div className="relative h-56 bg-gray-50 p-6">
                   <Image
                     src={store.image}
                     alt={store.name[currentLocale]}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-contain"
                   />
                 </div>
                 <div className="p-6">
+                  <p className="text-xs font-medium text-brand-red uppercase tracking-widest mb-3">
+                    {store.city[currentLocale]}
+                  </p>
                   <h2 className="text-xl font-serif font-bold text-charcoal mb-2 group-hover:text-brand-red transition-colors">
                     {store.name[currentLocale]}
                   </h2>
-                  <p className="text-sm text-gray-500 font-sans mb-4">
-                    {store.address[currentLocale]}
-                  </p>
                   <div className="flex justify-between items-center border-t border-gray-100 pt-4">
-                    <span className="text-xs font-medium text-gray-400 uppercase tracking-wide">
-                      {store.hours[currentLocale]}
-                    </span>
+                    <a
+                      href={store.instagram.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs font-medium uppercase tracking-widest text-charcoal border border-charcoal px-4 py-2 hover:bg-charcoal hover:text-white transition-colors"
+                    >
+                      Instagram
+                    </a>
                     <span className="text-sm font-medium text-brand-red">
                       {t('view_details')} →
                     </span>

@@ -24,19 +24,20 @@ export default async function StorePage({ params }: { params: Promise<{ locale: 
 
   return (
     <main className="min-h-screen bg-stark-white pt-20">
-      {/* Hero / Gallery */}
-      <div className="relative h-[50vh] w-full">
+      <div className="relative h-[40vh] w-full bg-gray-50">
         <Image
           src={store.image}
           alt={store.name[currentLocale]}
           fill
-          className="object-cover"
+          className="object-contain p-8"
           priority
         />
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-black/40" />
         <div className="absolute bottom-0 left-0 p-8 text-white max-w-4xl container mx-auto">
-          <h1 className="text-4xl md:text-6xl font-serif font-bold mb-2">{store.name[currentLocale]}</h1>
-          <p className="text-xl font-sans opacity-90">{store.address[currentLocale]}</p>
+          <p className="text-xs font-medium uppercase tracking-widest text-brand-red mb-4">
+            {store.city[currentLocale]}
+          </p>
+          <h1 className="text-4xl md:text-6xl font-serif font-bold">{store.name[currentLocale]}</h1>
         </div>
       </div>
 
@@ -44,60 +45,30 @@ export default async function StorePage({ params }: { params: Promise<{ locale: 
         {/* Left Column: Info */}
         <div className="md:col-span-1 space-y-8">
           <div>
-            <h3 className="text-sm font-bold text-brand-red uppercase tracking-widest mb-4">{t('hours')}</h3>
-            <p className="text-lg text-charcoal font-sans">{store.hours[currentLocale]}</p>
+            <h3 className="text-sm font-bold text-brand-red uppercase tracking-widest mb-4">{t('city_label')}</h3>
+            <p className="text-lg text-charcoal font-sans">{store.city[currentLocale]}</p>
           </div>
-          
+
           <div>
-            <h3 className="text-sm font-bold text-brand-red uppercase tracking-widest mb-4">{t('address')}</h3>
-            <p className="text-lg text-charcoal font-sans mb-4">{store.address[currentLocale]}</p>
-            <a 
-              href={`https://maps.google.com/?q=${store.coordinates.lat},${store.coordinates.lng}`}
+            <h3 className="text-sm font-bold text-brand-red uppercase tracking-widest mb-4">{t('contact_label')}</h3>
+            <p className="text-lg text-charcoal font-sans">{store.contact[currentLocale]}</p>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-bold text-brand-red uppercase tracking-widest mb-4">{t('instagram_label')}</h3>
+            <a
+              href={store.instagram.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block border border-charcoal px-6 py-2 text-sm uppercase tracking-wide hover:bg-charcoal hover:text-white transition-colors"
+              className="inline-flex items-center border border-charcoal px-6 py-2 text-sm uppercase tracking-wide hover:bg-charcoal hover:text-white transition-colors"
             >
-              {t('get_directions')}
+              @{store.instagram.handle}
             </a>
-          </div>
-
-          <div>
-             <h3 className="text-sm font-bold text-brand-red uppercase tracking-widest mb-4">Contact</h3>
-             <p className="text-lg text-charcoal font-sans">{store.phone}</p>
-          </div>
-
-          <div>
-            <h3 className="text-sm font-bold text-brand-red uppercase tracking-widest mb-4">Features</h3>
-            <ul className="space-y-2">
-              {store.features.map(f => (
-                <li key={f} className="text-gray-600 font-sans capitalize flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-brand-red rounded-full" />
-                  {f.replace('-', ' ')}
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
 
         {/* Right Column: Map & Inquiry */}
         <div className="md:col-span-2 space-y-12">
-          {/* Map Placeholder */}
-          <a 
-            href={`https://maps.google.com/?q=${store.coordinates.lat},${store.coordinates.lng}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block group"
-          >
-            <div className="bg-gray-100 h-96 w-full relative overflow-hidden rounded-sm group-hover:opacity-90 transition-opacity">
-               <div className="absolute inset-0 flex items-center justify-center bg-gray-200 text-gray-500 font-sans">
-                 <div className="text-center">
-                   <p className="mb-2 font-bold text-charcoal">Click to Open in Google Maps</p>
-                   <p className="text-xs">Lat: {store.coordinates.lat}, Lng: {store.coordinates.lng}</p>
-                 </div>
-              </div>
-            </div>
-          </a>
-
           {/* Contact Form Placeholder */}
           <div className="bg-white border border-gray-100 p-8 shadow-sm">
             <h3 className="text-2xl font-serif font-bold text-charcoal mb-6">Inquiries</h3>

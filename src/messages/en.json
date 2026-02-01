@@ -19,9 +19,12 @@
     "join_cta": "View Careers"
   },
   "Locations": {
-    "title": "Our Locations",
-    "subtitle": "Find a sanctuary of coffee near you.",
+    "title": "Where to Find Ugandan Coffee",
+    "subtitle": "Partner cafes and shops serving Uganda Coffee Shop selections.",
     "view_details": "View Details",
+    "city_label": "City",
+    "contact_label": "Address / Contact",
+    "instagram_label": "Instagram",
     "get_directions": "Get Directions",
     "hours": "Hours",
     "address": "Address"
@@ -31,7 +34,15 @@
     "heritage_title": "A Legacy of Prosperity",
     "heritage_text": "Inspired by the Kabaka of Buganda's mission for prosperity, we strive to bring the finest Ugandan coffee to the world.",
     "team_title": "Our People",
-    "team_text": "Supporting 500+ workers across Uganda and Japan, fostering a community of dedication and excellence."
+    "team_text": "Supporting 500+ workers across Uganda and Japan, fostering a community of dedication and excellence.",
+    "features_title": "Features of Uganda Coffee",
+    "features": [
+      "Fair-trade coffee grown naturally with great care.",
+      "Only fully ripened coffee cherries are hand-picked one by one.",
+      "100% natural: no pesticides or chemical fertilizers.",
+      "Grown with sustainable agroforestry that protects biodiversity.",
+      "Refreshing acidity, mild richness, and sweet citrus-like aromas."
+    ]
   },
   "Shop": {
     "title": "Shop Collection",
@@ -118,20 +129,82 @@
       }
     }
   },
+  "Bukonzo": {
+    "eyebrow": "From Uganda",
+    "title": "From the Mountains of the Moon to Your Cup",
+    "subtitle": "Taste the journey. Support the community.",
+    "journey": {
+      "step_label": "Step {index}",
+      "steps": [
+        {
+          "title": "Mountain Slopes & Hand-Picking",
+          "description": "Select harvest of red cherries from the fertile slopes of the Rwenzori Mountains."
+        },
+        {
+          "title": "Traditional Washing Station",
+          "description": "Pulping and fermentation at local washing stations to develop flavor."
+        },
+        {
+          "title": "Sun Drying on Raised Beds",
+          "description": "Even drying under the African sun on raised beds for consistent quality."
+        },
+        {
+          "title": "Dry Milling & Grading",
+          "description": "Removing parchment and sorting beans for uniform excellence."
+        }
+      ]
+    },
+    "impact": {
+      "title": "Coffee That Gives Back",
+      "subtitle": "More than a cup — our community impact.",
+      "items": [
+        {
+          "title": "Economic Empowerment",
+          "description": "Fair wages and training for farmers through sustainable practices.",
+          "year": "Ongoing"
+        },
+        {
+          "title": "Education Support",
+          "description": "School supplies and classroom support for local students.",
+          "year": "2020"
+        },
+        {
+          "title": "Healthcare Expansion",
+          "description": "Clinic improvements for maternal and childcare access.",
+          "year": "2019"
+        },
+        {
+          "title": "Clean Water Access",
+          "description": "Community water facilities supporting households.",
+          "year": "2018"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Experience Bukonzo Coffee",
+      "subtitle": "Visit Uganda Coffee Shop to taste single-origin brews and learn more about our story.",
+      "button": "Find a Store"
+    }
+  },
+  "HomeProducts": {
+    "eyebrow": "Shop",
+    "title": "Featured Products",
+    "subtitle": "A small selection from our Uganda-grown collection.",
+    "cta": "View all products",
+    "categories": {
+      "liquid": "Liquid Coffee",
+      "beans": "Single Origin Beans",
+      "drip": "Drip Bags",
+      "ground": "Ground Coffee",
+      "gifts": "Gift Sets"
+    }
+  },
   "Membership": {
     "title": "Memberships & Subscriptions",
     "subtitle": "Natural Uganda coffee, delivered with care.",
     "intro_title": "UGANDA Coffee Shop",
     "intro_body": "At UGANDA Coffee Shop, we aim to promote international exchange through the concept of fair trade by delivering authentic coffee from Uganda, known as the Pearl of Africa.",
     "intro_body_2": "We work directly with Ugandan farmers to bring you exceptional quality coffee while supporting global connections. We warmly invite you to experience the true taste of Uganda coffee.",
-    "features_title": "Features of Uganda Coffee",
-    "features": [
-      "Fair-trade coffee grown naturally with great care.",
-      "Only fully ripened coffee cherries are hand-picked one by one.",
-      "100% natural: no pesticides or chemical fertilizers.",
-      "Grown with sustainable agroforestry that protects biodiversity.",
-      "Refreshing acidity, mild richness, and sweet citrus-like aromas."
-    ],
     "membership_title": "Membership Benefits",
     "membership_body": "Fresh coffee delivered to your home every month with our subscription plans.",
     "membership_body_2": "All subscription prices include tax and shipping.",
@@ -192,7 +265,7 @@
       "subtitle": "Sign in to access subscriptions and member pricing.",
       "email_label": "Email",
       "password_label": "Password",
-      "phone_label": "Japanese Mobile Number",
+      "phone_label": "Mobile Number",
       "phone_hint": "Enter a Japanese number (e.g., 090-1234-5678). We'll send an SMS code.",
       "code_label": "Verification Code",
       "code_placeholder": "Enter the SMS code",
@@ -204,6 +277,7 @@
       "switch_to_signup": "Need an account? Sign up",
       "switch_to_signin": "Already have an account? Sign in",
       "sign_out": "Sign Out",
+      "signed_in": "You are signed in as a member.",
       "loading": "Checking membership access...",
       "missing_env": "Supabase environment variables are missing. Add NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY.",
       "sms_sent": "SMS code sent. Please check your phone.",

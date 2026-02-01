@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { Link } from '@/i18n/routing';
 
 export default function HeritageSection() {
   const t = useTranslations('HeritageSection');
@@ -12,19 +13,19 @@ export default function HeritageSection() {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center gap-16 md:gap-24">
           <div className="md:w-1/2 w-full">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="relative aspect-[4/5] bg-gray-100 overflow-hidden"
-            >
-               <Image 
-                 src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=1887&auto=format&fit=crop"
-                 alt="Heritage Craftsmanship"
-                 fill
-                 className="object-cover"
-               />
+               <motion.div
+                 initial={{ opacity: 0, x: -50 }}
+                 whileInView={{ opacity: 1, x: 0 }}
+                 viewport={{ once: true }}
+                 transition={{ duration: 0.8 }}
+                 className="relative aspect-[3/2] bg-gray-100 overflow-hidden"
+               >
+                 <Image 
+                   src="/images/story/heritage-new.jpeg"
+                   alt="Heritage Craftsmanship"
+                   fill
+                   className="object-cover"
+                 />
             </motion.div>
           </div>
           
@@ -47,29 +48,19 @@ export default function HeritageSection() {
             >
               {t('title')}
             </motion.h2>
-            
+
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="text-lg text-gray-600 font-sans leading-relaxed mb-8"
+              transition={{ delay: 0.3 }}
+              className="text-lg text-gray-600 font-sans leading-relaxed"
             >
               {t('description')}
             </motion.p>
-            
-            <motion.button
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              className="text-charcoal border-b border-charcoal pb-1 hover:text-brand-red hover:border-brand-red transition-colors font-medium tracking-wide uppercase text-sm"
-            >
-              {t('cta')}
-            </motion.button>
-          </div>
-        </div>
-      </div>
-    </section>
+           </div>
+         </div>
+       </div>
+     </section>
   );
 }
