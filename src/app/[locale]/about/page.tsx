@@ -21,9 +21,9 @@ export default function AboutPage() {
         <section className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
            <div className="relative aspect-[4/5] bg-gray-100 rounded-sm overflow-hidden">
              {/* Placeholder for Kabaka/Heritage Image */}
-             <Image 
-                src="https://images.unsplash.com/photo-1524350876685-274059332603?q=80&w=2071&auto=format&fit=crop"
-                alt="Ugandan Heritage"
+             <Image
+                src="/images/about/kabaka.jpeg"
+                alt="Kabaka of Buganda"
                 fill
                 className="object-cover"
              />
@@ -43,16 +43,60 @@ export default function AboutPage() {
 
         {/* Uganda Coffee Shop Section */}
         <section className="bg-white border border-gray-100 shadow-sm p-8 md:p-10">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10 items-start">
+            <div className="space-y-4">
+              <h2 className="text-3xl font-serif font-bold text-charcoal">
+                {t('intro_title')}
+              </h2>
+              <p className="text-gray-700 font-sans leading-relaxed">
+                {t('intro_body')}
+              </p>
+              <p className="text-gray-700 font-sans leading-relaxed">
+                {t('intro_body_2')}
+              </p>
+              <p className="text-gray-700 font-sans leading-relaxed">
+                {t('intro_body_3')}
+              </p>
+              <p className="text-gray-700 font-sans leading-relaxed">
+                {t('intro_body_4')}
+              </p>
+            </div>
+            <div className="relative aspect-[3/4] bg-gray-100 overflow-hidden">
+              <Image
+                src="/images/about/african-man-terimba.jpeg"
+                alt="Terimba Coffee founder holding product"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Parent Company Section */}
+        <section className="bg-gray-50 border border-gray-100 p-8 md:p-10">
           <div className="max-w-3xl space-y-4">
             <h2 className="text-3xl font-serif font-bold text-charcoal">
-              {t('intro_title')}
+              {t('parent_title')}
             </h2>
             <p className="text-gray-700 font-sans leading-relaxed">
-              {t('intro_body')}
+              {t('parent_body')}
             </p>
             <p className="text-gray-700 font-sans leading-relaxed">
-              {t('intro_body_2')}
+              {t('parent_body_2')}
             </p>
+            <div className="pt-2">
+              <p className="text-sm font-sans uppercase tracking-widest text-charcoal/70 mb-3">
+                {t('parent_divisions_title')}
+              </p>
+              <ul className="space-y-2 text-gray-700 font-sans">
+                {(t.raw('parent_divisions') as string[]).map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span className="mt-2 w-1.5 h-1.5 bg-brand-red rounded-full" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </section>
 

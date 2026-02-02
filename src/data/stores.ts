@@ -13,9 +13,18 @@ export interface Store {
     en: string;
     ja: string;
   };
-  instagram: {
+  instagram?: {
     handle: string;
     url: string;
+  };
+  status?: 'open' | 'coming-soon';
+  details?: {
+    en: string;
+    ja: string;
+  };
+  highlights?: {
+    en: string[];
+    ja: string[];
   };
   image: string;
 }
@@ -23,8 +32,8 @@ export interface Store {
 export const stores: Store[] = [
   {
     id: '1',
-    slug: 'kitchen-sawasawa',
-    name: { en: 'kitchen SAWASAWA', ja: 'キッチン サワサワ' },
+    slug: 'ucsx-kitchen-sawasawa',
+    name: { en: 'UCS x kitchen SAWASAWA', ja: 'UCS×キッチン サワサワ' },
     city: { en: 'Higashi Osaka City', ja: '東大阪市' },
     contact: {
       en: '1-7-14 Hanazonohonmachi, Higashiosaka City, Osaka, Japan; Phone: 072-964-4457; Hours: 10:00-19:00 (closed Monday)',
@@ -33,6 +42,22 @@ export const stores: Store[] = [
     instagram: {
       handle: 'kitchen_sawasawa',
       url: 'https://www.instagram.com/kitchen_sawasawa/'
+    },
+    details: {
+      en: "Uganda Coffee Shop's dedicated restaurant in collaboration with kitchen SAWASAWA. Opened in December.",
+      ja: 'ウガンダコーヒーショップの直営レストランとして、キッチン サワサワとのコラボで12月にオープンしました。'
+    },
+    highlights: {
+      en: [
+        'UCS x kitchen SAWASAWA collaboration location.',
+        'Opened in December.',
+        'Higashi Osaka City, Osaka.'
+      ],
+      ja: [
+        'UCS×キッチン サワサワのコラボ店舗。',
+        '12月にオープン。',
+        '大阪府東大阪市。'
+      ]
     },
     image: '/images/locations/kitchen-sawasawa.jpeg'
   },
@@ -140,5 +165,31 @@ export const stores: Store[] = [
       url: 'https://www.instagram.com/nishida_coffee/'
     },
     image: '/images/locations/nishida-coffee.jpeg'
+  },
+  {
+    id: '9',
+    slug: 'fukuoka-yakuin-cafe-bar',
+    name: { en: 'Uganda Coffee Shop Cafe Bar (Yakuin)', ja: 'ウガンダコーヒーショップ カフェバー（薬院）' },
+    city: { en: 'Fukuoka City (Yakuin)', ja: '福岡市（薬院）' },
+    contact: {
+      en: 'Yakuin, Fukuoka City, Japan (opening soon)',
+      ja: '福岡市 薬院（近日オープン）'
+    },
+    status: 'coming-soon',
+    details: {
+      en: 'An upcoming Uganda Coffee Shop cafe bar in Yakuin, Fukuoka City.',
+      ja: '福岡市・薬院にウガンダコーヒーショップのカフェバーをオープン予定。'
+    },
+    highlights: {
+      en: [
+        'Cafe bar opening soon in Yakuin, Fukuoka.',
+        'Uganda Coffee Shop products will be on shelves at Mina Mall in Fukuoka starting February 2026.'
+      ],
+      ja: [
+        '福岡・薬院でカフェバーを近日オープン。',
+        '2026年2月より福岡のMina Mallで商品販売を開始予定。'
+      ]
+    },
+    image: '/images/locations/uganda-coffee-shop-coming-soon.jpeg'
   }
 ];
