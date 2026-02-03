@@ -5,18 +5,17 @@ import Image from 'next/image';
 import { Link } from '@/i18n/routing';
 import { stores as allStores, Store } from '@/data/stores';
 import { IpLocation, scoreLocationMatch } from '@/lib/location';
+import { useTranslations } from 'next-intl';
 
 type Locale = 'en' | 'ja';
 
 type Props = {
   locale: Locale;
-  t: {
-    (key: 'view_details' | 'instagram_cta' | 'coming_soon'): string;
-  };
   stores?: Store[];
 };
 
-export default function LocationsGrid({ locale, t, stores = allStores }: Props) {
+export default function LocationsGrid({ locale, stores = allStores }: Props) {
+  const t = useTranslations('Locations');
   const [location, setLocation] = useState<IpLocation | null>(null);
 
   useEffect(() => {

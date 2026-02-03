@@ -16,10 +16,7 @@ export default async function LocationsPage({ params }: { params: Promise<{ loca
           {t('subtitle')}
         </p>
 
-        <LocationsGrid
-          locale={currentLocale}
-          t={(key) => t(key)}
-        />
+        <LocationsGrid locale={currentLocale} />
       </div>
     </main>
   );
